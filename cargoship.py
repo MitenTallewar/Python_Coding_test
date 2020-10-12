@@ -29,9 +29,7 @@ class Cargoship:
     def can_depart(self):
         total_weight = 0
         for c in self.cargo:
-            print('c in cargo--',c)
             total_weight +=c[1]
-            print('total weight ',total_weight)
         if total_weight <= self.capacity:
             return True
         return False
