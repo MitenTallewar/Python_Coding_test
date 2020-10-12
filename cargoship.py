@@ -17,7 +17,7 @@ class Cargoship:
         self.capacity = capacity
 
 
-    def unload(self,port):
+    def unload(self,port): #check and remove cargo if port pass in function is present in cargo list and return that cargo in list.
         remove_cargo = []
         for c in self.cargo:
             if c[0] == port:
@@ -26,7 +26,7 @@ class Cargoship:
         return list(remove_cargo)
 
 
-    def can_depart(self):
+    def can_depart(self): #this function return True if weight of cargos are less than define capacity.
         total_weight = 0
         for c in self.cargo:
             total_weight +=c[1]
@@ -35,7 +35,7 @@ class Cargoship:
         return False
 
 
-    def load(self,new_cargo):
+    def load(self,new_cargo): #this function will add cargo in cargo list.
         for cargos in new_cargo:
             self.cargo.append(cargos)
 
